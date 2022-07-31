@@ -1,10 +1,57 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Antigua</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;1,400;1,700&family=Radio+Canada:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/villa_antigua.css">
+</head>
+<body>
+  <header>
+    <div class="holder cabezal">
+      <div class="logo">
+        <img src="images/varios/logo.png" alt="logo" width="250px">
+      </div>
+      <div class="redes">
+        <img src="images/varios/face_logo.png" alt="facebook" class="redlogo">
+        <img src="images/varios/tweet_logo.png" alt="tweeter" class="redlogo">
+        <img src="images/varios/insta_logo.png" alt="instagram" class="redlogo">
+        <img src="images/varios/google+_logo.png" alt="google+" class="redlogo">
+        <img src="images/varios/youtube_logo.png" alt="youtube" class="redlogo">
+      </div>
+    </div>
+  </header>
+  <nav>
+    <ul class="holder">
+      <li><a class="{{#if isHome}}activo{{/if}}" href="/">Home</a></li>
+      <li><a class="{{#if isQuienes_somos}}activo{{/if}}" href="/quienes_somos">Quienes Somos</a></li>
+      <li><a class="{{#if isNuestros_viñedos}}activo{{/if}}" href="/nuestros_viñedos">Nuestros Viñedos</a></li>
+      <li><a class="{{#if isNuestros_vinos}}activo{{/if}}" href="/nuestros_vinos">Nuestros Vinos</a></li>
+      <li><a class="{{#if isGaleria}}activo{{/if}}" href="/galeria">Galeria</a></li>
+      <li><a class="{{#if isNovedades}}activo{{/if}}" href="/novedades">Novedades</a></li>
+      <li><a class="{{#if isContacto}}activo{{/if}}" href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+         {{{body}}}
+  </main>
+  <footer>
+    <p>Diseñado por Soledad Orozco - Año 2022</p>
+  </footer>
+</body>
+
 </html>

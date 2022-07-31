@@ -1,0 +1,690 @@
+/* font-family: 'Amiri', serif;
+font-family: 'Radio Canada', sans-serif; 
+font-family: 'Tangerine', cursive;*/
+/* font-family: 'Tangerine', cursive; */
+body{
+    margin: 0;
+    max-width: 100%;
+    font-size: 16px;
+    background-image: url('../images/galeria/viñedo_1_copia.jpg');
+    /* filter: saturate(191%) contrast(107%) invert(40%); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover; 
+}
+header{
+    background-color: rgba(56,55,55,0.5);
+}
+div.cabezal{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    padding: 20px;
+}
+.redes{    
+    display: flex;
+    padding: 50px 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 10%;
+}
+.redlogo{
+    max-width: 20px;
+    max-height: 20px;
+}
+header img.redlogo:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+}    
+nav{
+    height: 20px;
+    background: none;
+    margin-left: 50%;
+    margin-right: 1%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;
+}
+nav ul li{
+    flex-grow: 1;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 3px 6px;
+}
+nav ul li a:hover{
+    text-decoration: underline; 
+    opacity: 0.5;
+}
+nav ul li a.activo{
+    text-decoration: underline;
+}
+footer{   
+    font-family: 'Amiri', serif;
+    color: white; 
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    height: 120px;
+    background-color: black;
+    opacity: 0.3;
+    clear: both;
+}
+.holder{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*inicio home*/
+div.contenedor{
+    display: flex;
+    max-width: 70%; /*672px*/
+    max-height: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    gap: 155px;
+}
+section.racimo{
+    max-width: 300px;
+    height: 300px;
+}
+section.varietal{
+    max-width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.card-body{
+    width: 300px;
+    min-height: 80px;
+    margin-top: 0;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 0 0 5px 0;
+}
+.varietal p,
+.racimo p{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.racimo img,
+.varietal img{
+    border-radius: 5px 0 0 0;
+}
+
+div.frase{
+    width: 777px;
+    min-height: 600px;
+    background-image: url('../images/varios/frase2.png');
+    box-shadow: 20px 26px 24px 10px rgba(0,0,0,0.71);
+    /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+/* .frase::before{
+    position: absolute;
+    content:'';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+ } */
+
+div.frase p{
+    font-size: 60px;
+    font-family:'Tangerine';
+    text-align: center;
+    padding-top:50px ;
+    animation-duration: 3s;
+    animation-name: texto;
+    animation-fill-mode: forwards;
+    color:rgba(255, 255, 255,.4);
+}
+@keyframes texto{
+    from{
+        margin-left: 100%;
+        font-size: 200%;
+        color:rgba(255,255,255,0.6);
+    }
+    50%{
+        color: rgba(255, 255, 255,0.8)
+    }
+    to{
+        margin-left: 45%;
+        color: white;
+    }
+}
+
+/*fin home*/
+
+/*inicio quienes somos*/
+div.nosotros{
+    max-width: 90%; /*1332px*/
+    margin: 0 auto;
+    margin-top: 60px;
+}
+div.historia{
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.historia img{
+    max-width: 500px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -15px 14px 29px 2px;
+}
+.nosotros h2{
+    font-size: 20px;
+}
+div.comienzos{
+    max-width: 70%;
+    background-color: cornsilk;
+    padding: 25px 25px 25px 25px;
+    box-sizing: border-box;
+    font-family: 'Amiri', serif;
+    box-shadow: -15px 14px 29px 2px;
+    border-radius: 0 10px 10px 0;
+}
+div.comienzos p{
+    text-align: justify;
+}
+div.comienzos h2{
+    text-shadow: 1px -1px 2px rgba(0,0,0,0.66);
+}
+div.actualidad{
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: cornsilk;
+    font-family: 'Amiri', serif;
+}
+div.actualidad h2{
+    margin-left: 533px;
+    text-shadow: 1px -1px 2px rgba(0,0,0,0.66);
+}
+div.staff{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.staff section{
+    max-width: 300px ;
+    background-color: #fff8dc;
+    border-radius: 5%;
+    box-shadow: -15px 14px 29px 2px;
+    text-align: center;
+}
+.staff section img{
+    max-width: 300px;
+    border-radius: 5% 5% 0 0;
+}
+.staff h5, 
+.staff h6{
+    font-family: 'Amiri', serif;
+}    
+.staff h5{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.staff h6{
+    font-size: 14px;
+    font-weight: 500;
+    margin:0;
+}
+.staff p{
+    text-align: left;
+    padding: 20px;
+}
+/*fin quienes somos*/
+
+/*inicio nuestros viñedos*/
+div.hilera{
+    max-width: 80%;
+    min-height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+}
+div.hilera img{
+    max-width: 500px;
+    box-shadow: -21px -19px 28px 0px rgba(0,0,0,0.63);
+}
+p.texto{
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    color: #e4e5d7;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+div.viñedos{
+    max-width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+div.lulunta{
+    max-width: 520px;
+    min-height: 390px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url(../images/galeria/viñedo_3.jpg);
+}
+div .tunuyan{
+    max-width: 520px;
+    min-height: 390px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url(../images/galeria/viñedo_2.jpg);
+    /* background-repeat: no-repeat; */
+}
+div .miradores{
+    max-width: 520px;
+    min-height: 390px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url(../images/galeria/viñedo_4.jpg);
+    /* background-repeat: no-repeat; */
+}
+.viñedos h2,
+.viñedos p{
+    font-family: 'Amiri', serif;
+    color: #e4e5d7;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 2s ease;
+}
+.lulunta:hover p, 
+.lulunta:hover h2,
+.miradores:hover p, 
+.miradores:hover h2,
+.tunuyan:hover p,
+.tunuyan:hover h2{
+    opacity:1;
+}
+.viñedos p{
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 500;
+    margin: 0;
+}
+.viñedos h2{
+    margin-bottom: 0;
+    text-align: center;
+}
+div.viñedo{
+    width: 440px;
+    margin: 40px 20px auto;
+    
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10% 0 10% 0;
+    opacity: 0;
+    transition: all 2s ease;
+}
+.lulunta:hover .viñedo,
+.tunuyan:hover .viñedo,
+.miradores:hover .viñedo{
+    opacity: 1;
+}
+/*fin nuestros viñedos*/
+
+/*inicio nuestros vinos*/
+div.texto{
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+div.texto h2,
+div.texto p{
+    color:white
+}
+div.texto p{
+    font-size: 20px;
+}
+div.vino{
+    max-width: 90%;
+    height: 1000px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 700px 300px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+div#carousel {
+    margin-top: 150px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100vw;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+  }
+  div.item {
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    background-color:coral;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+  }
+  div.item:nth-of-type(1) {
+    --offset: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #dd6f10;
+    box-sizing: border-box;
+}
+  div.item:nth-of-type(2) {
+    --offset: 2;
+    background-color:rgba(0, 0, 0, 0.9);
+    color: #f5dca3;
+    box-sizing: border-box;
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #942221;
+    box-sizing: border-box;
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+    background-color:  rgba(0, 0, 0, 0.9);
+    color: #db582c;
+    padding: 30px 49.5px 200px;
+    box-sizing: border-box;
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #897658;
+    padding: 50px 50px 100px;
+    box-sizing: border-box;
+  }
+  div.item:nth-child(-n+3) h2,
+  div.item:nth-child(-n+3) p{
+      padding: 0px 20px 10px;
+}
+div.item:nth-child(2) h2,
+div.item:nth-child(3) h2{
+    margin-top: 50px;
+    padding-top: 20px;
+}
+div.item img:nth-child(-n+3){
+    border: 2px solid rgba(210, 200, 190, 0.7);
+    box-sizing: border-box;
+}
+  input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ div#carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ div#carousel {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ div#carousel {
+    --position: 3;
+  }
+  
+  input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(4):checked ~ div#carousel {
+    --position: 4;
+  }
+  
+  input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(5):checked ~ div#carousel {
+    --position: 5;
+  }
+/*fin nuestros vinos*/
+
+/*inicio galeria*/
+div.galeria{
+    display: 
+    flex;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+div.photos{
+    width: 300px;
+    height: 200px;   
+}
+div.photos img,
+div.photos span{
+    transition: all 1.5s ease; 
+}
+div.photos:nth-child(n+4){
+    margin-top: 60px;
+}
+div.photos:hover img,
+div.photos:hover span{
+    transform: scale(1.3);
+}
+.photos span{
+    color:white;
+}
+/*fin galeria*/
+
+/*inicio novedades*/
+div.novedades{
+    max-width: 50%;
+    margin-top: 100px;
+    margin-left: 110px;
+}
+div.novedades h2,
+div.novedades p{
+    color:white
+}
+div.novedades h2{
+    font-size: 40px;
+    font-weight: 400;
+}
+div.novedades p{
+    font-size: 25px;
+    font-weight: 200;
+}
+div.noticias{
+    width: 90%;
+    background-color:#e4e5d7;
+    margin: 0 auto; 
+    margin-top: 100px;
+}
+div.noticia{
+    padding: 20px;
+}
+div.noticia h3{
+    font-size: 24px;
+}
+div.noticia h4{
+    font-size: 20px;
+}
+/* div.noticia{
+    max-width: 461px;
+    min-height: 618px;
+    background-color: #fbf8e7;
+}
+.noticias .noticia h2,
+.noticias .noticia p{
+    padding: 0 20px 0;
+}
+div.noticia:nth-child(n+4){
+    margin-top: 100px;
+ 
+}
+div.modal-content{
+    max-width: 70%; 
+    margin: 0 auto; 
+    margin-bottom: 40px;
+}
+.modal-title{
+    font-size: 45px;
+}
+.modal-body p{
+    font-size: 20px; 
+    text-align: justify;
+}
+.modal-body div.cita{
+    display: flex; 
+    margin-bottom: 20px;
+}
+.modal-body div.cita span{
+    font-size: 40px; 
+    font-style: italic; 
+    opacity: .5; 
+    margin-top: 10%;
+}
+.modal-body div.cita img{
+    max-width: 60%;
+}
+.modal-body ul li,
+.modal-body ol li{
+    font-size: 20px; 
+    text-align: justify;
+}
+button.btn-primary{
+    background-color: rgb(45, 94, 143);
+    position: relative;
+    left: 20px;
+    top: 10px;
+} */
+/*inicio contacto*/
+div.social{
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+   
+}
+div.social h2{
+    margin-left: 100px;
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+   
+}
+.social div.logos{
+    display: flex;
+    width: 70%;
+    justify-content: left;
+    gap: 100px;
+    margin-left: 200px;
+}
+.fa-brands{
+    font-size: 60px;
+    color: white;
+    padding: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.fa-brands:hover{
+    transform: scale(1.15);
+}
+div.contacto{
+    max-width: 90%;
+    display: flex;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+div.formulario{
+    width: 40%;
+    padding: 30px;
+}
+form p label{
+    min-width: 250px;
+}
+
+form p input,
+form p textarea{
+    width: 100%;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+.formulario ul{
+    display: flex;
+    list-style: none;
+}
+ul li{
+    margin-left: 10px;
+}
+textarea{
+    height: 150px;
+    resize: none;
+}
+input[type="submit"]{
+    background-color: #5f9ea0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    font-size: 20px;
+    color: white;
+    padding: 6px 20px;
+    width: auto;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: #1e5253;
+}
+div.ubicacion{
+    width: 100%;
+    padding: 30px;
+}
+div.ubicacion p{
+    background-color: #5f9ea0;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+}
+.ubicacion iframe{
+    width: 100%;
+    height: 700px;
+    margin-top: 20px;
+}
+/*fin contacto*/
