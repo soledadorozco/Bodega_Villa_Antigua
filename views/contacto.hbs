@@ -10,22 +10,22 @@
         <div class="contacto">
             <div class="formulario">
                 <h2>Consultanos</h2>
-                <form action="" method="">
+                <form action="/contacto" method="post">
                     <p>
                         <label for="nom">Nombre y Apellido (*)</label>
-                        <input type="text" id="nom" name="" required />
+                        <input type="text" id="nom" name="nombre" required />
                     </p>
                     <p>
                         <label for="">Correo electrónico (*)</label>
-                        <input type="text">
+                        <input type="text" name="correo_electronico">
                     </p>
                     <p>
                         <label for="">Teléfono (con código país/área) (*):</label>
-                        <input type="text" placeholder="(+54 9) 11 55552222" />
+                        <input type="text" placeholder="(+54 9) 11 55552222" name="telefono"/>
                     </p>
                     <p>
                         <label for="">País / Provincia (*)</label>
-                        <input type="text" placeholder="Argentina / Mendoza">
+                        <input type="text" placeholder="Argentina / Mendoza" name="pais">
                     </p>
                     <p>
                         <label for="">Tildar lo que corresponda <br> PERFIL</label>
@@ -77,11 +77,11 @@
                     </p>
                     <p>
                         <label for="">Asunto (*)</label>
-                        <input type="text">
+                        <input type="text" name="asunto">
                     </p>
                     <p>
                         <label for="">Mensaje (*)</label>
-                        <textarea name="" id=""></textarea>
+                        <textarea name="comentario" id=""></textarea>
                     </p>
                     <p>
                         <input type="submit" value="Enviar">
@@ -89,6 +89,9 @@
                     <p>(*) TODOS LOS CAMPOS SON OBLIGATORIOS</p>
 
                 </form>
+                <div style="padding: 10px; background-color:#5f9ea0">
+                <p style="color:white; font-size: 20px; text-align:center;">{{message}}</p>
+                </div>
             </div>
             <div class="ubicacion">
                 <h2>Donde estamos</h2>

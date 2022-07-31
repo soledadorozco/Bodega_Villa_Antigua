@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config(); //para que cargue los datos del archivo .env
+
 var indexRouter = require('./routes/index');
 var quienes_somosRouter = require('./routes/quienes_somos'); //routes/quienes_somos.js
 var nuestros_viñedosRouter = require('./routes/nuestros_viñedos'); //routes/nuestros_viñedos.js
