@@ -1,0 +1,13 @@
+div.logo{
+    margin: 0 auto;
+}
+div.container{
+  margin-top: 200px;
+}
+input{
+    max-width: 60%;
+}
+input,
+button{
+    margin-left: 270px ;
+}

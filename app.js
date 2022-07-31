@@ -13,6 +13,7 @@ var nuestros_vinosRouter = require('./routes/nuestros_vinos'); //routes/nuestros
 var galeriaRouter = require('./routes/galeria'); //routes/galeria.js
 var novedadesRouter = require('./routes/novedades'); //routes/novedades.js
 var contactoRouter = require('./routes/contacto'); //routes/contacto.js
+var loginRouter = require('./routes/admin/login'); //routes/admin/login.js
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/nuestros_vinos', nuestros_vinosRouter);
 app.use('/galeria', galeriaRouter);
 app.use('/novedades', novedadesRouter);
 app.use('/contacto', contactoRouter);
+app.use('/admin/login', loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
