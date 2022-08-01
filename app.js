@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config(); //para que cargue los datos del archivo .env
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var quienes_somosRouter = require('./routes/quienes_somos'); //routes/quienes_somos.js
@@ -14,6 +15,7 @@ var galeriaRouter = require('./routes/galeria'); //routes/galeria.js
 var novedadesRouter = require('./routes/novedades'); //routes/novedades.js
 var contactoRouter = require('./routes/contacto'); //routes/contacto.js
 var loginRouter = require('./routes/admin/login'); //routes/admin/login.js
+var adminRouter = require('./routes/admin/novedades'); // rutes/admin/novedades.js
 
 var app = express();
 
@@ -27,6 +29,26 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret:'sdhjdksjdsajfrhajfjafafa25467',
+  // cookie:{MaxAge:null},
+  resave:false,
+  saveUninitialized:true
+}))
+
+secured = async(req,res,next) => {
+  try{
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else{
+      res.redirect('/admin/login')
+    }
+  }catch(error) {
+    console.log(error)
+  }
+}
+
 app.use('/', indexRouter);
 app.use('/quienes_somos', quienes_somosRouter);
 app.use('/nuestros_viñedos', nuestros_viñedosRouter);
@@ -35,6 +57,7 @@ app.use('/galeria', galeriaRouter);
 app.use('/novedades', novedadesRouter);
 app.use('/contacto', contactoRouter);
 app.use('/admin/login', loginRouter);
+app.use('/admin/novedades', secured, adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

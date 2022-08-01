@@ -1,4 +1,11 @@
+ 
 <div class="container">
+ {{#if error}}
+            <div class="usuario">
+                <p><i class="fa-solid fa-triangle-exclamation" style="color: #9c1515;"></i> Usuario y/o contraseña
+                    incorrecta</p>
+            </div>
+    {{/if}}
     <div class="row">
         <div class="col">
             <form action="/admin/login" method="post">
@@ -11,9 +18,7 @@
                 <button type="submit" class="btn btn-primary">Ingresar</button>
 
             </form>
-            {{#if error}}
-            <p style="font-size: 20px; color:#da3c3c; margin-left: 270px; margin-top: 50px"><i class="fa-solid fa-triangle-exclamation" style="color: #da3c3c ;"></i> Usuario y/o contraseña incorrecta</p>
-            {{/if}}
+          
         </div>
     </div>
 </div>
