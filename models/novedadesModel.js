@@ -17,7 +17,12 @@ async function getNovedades(){
             throw error;
         }
     }
+    async function deleteNovedadByID(id){
+        var query = 'delete from novedades where id= ?';
+        var rows = await pool.query(query,[id]);
+        return rows;
+    }
 
 
-module.exports = { getNovedades, insertNovedades }
+module.exports = { getNovedades, insertNovedades, deleteNovedadByID }
 //try - catch: nos ayuda con el manejo de error

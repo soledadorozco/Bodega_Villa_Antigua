@@ -21,6 +21,8 @@ router.get('/agregar',(req,res,next) =>{
 
 })
 
+
+//agregar una novedad
 router.post('/agregar', async (req,res,next) =>{
   // console.log(req.body)
   try{
@@ -45,6 +47,15 @@ router.post('/agregar', async (req,res,next) =>{
 
 
   }
+})
+
+
+//eliminar una novedad
+router.get('/eliminar/:id', async(req,res,next) =>{
+  // console.log(req.params.id); //params porque estamos pasando solamente un id, es un parametro
+  var id = req.params.id;
+  await novedadesModel.deleteNovedadByID(id)
+  res.redirect('/admin/novedades')
 })
 
 
