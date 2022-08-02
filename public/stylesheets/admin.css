@@ -4,9 +4,9 @@ div.holder{
 div.logo{
     margin: 0 auto;
 }
-input{
+/* input{
     max-width: 60%;
-}
+} */
 input,
 button{
     margin-left: 270px ;
