@@ -20,6 +20,9 @@
                 <button type="submit" class="btn btn-primary mb-3" >Guardar</button>
                 </div>
             </form>
+            {{#if error}}
+            <p class="requerido">{{message}}</p>
+            {{/if}}
         </div>
     </div>
 </div>

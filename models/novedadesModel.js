@@ -1,7 +1,7 @@
 var pool = require('./bd');
 
 async function getNovedades(){ 
-        var query = 'select * from novedades order by id DESC';
+        var query = 'select * from novedades';
         var rows = await pool.query(query);
         return rows;
     }
@@ -9,7 +9,7 @@ async function getNovedades(){
     async function insertNovedades(obj){
         try{
             var query = 'insert into novedades set ?';
-            var rows = await pool.query(qeury,[obj]);
+            var rows = await pool.query(query,[obj]);
             return rows;
 
         }catch(error){

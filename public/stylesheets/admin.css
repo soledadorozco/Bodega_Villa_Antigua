@@ -1,21 +1,13 @@
-div.holder{
+div .holder{
     margin-bottom: 100px;
 }
 div.logo{
     margin: 0 auto;
 }
-/* input{
-    max-width: 60%;
-} */
-input,
-button{
-    margin-left: 270px ;
-    /* margin-top: 150px; */
-}
 div.usuario{
     width: 400px;
     height: 80px;
-    margin: 0 0 50px 270px;
+    margin: 0 0 50px 100px;
     text-align: center;
     background-color: rgb(230, 128, 128);
     border: 1px solid rgb(190, 27, 27);
@@ -28,7 +20,29 @@ div.usuario p{
     /* margin-left: 270px; 
     margin-top: 50px" */
 }
-div.row .col h3{
+div.listado{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+div.row .col h3,
+div.row .col h2,
+div.row .col-9 h3,
+.table th{
     color: white;
- 
+}
+.form-label,
+.table th{
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+}
+.fila-1 th{
+    font-size: 24px;
+    font-weight: 500;
+}
+p.requerido{
+    color: red;
+    font-size: 20px;
 }
