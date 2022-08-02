@@ -28,9 +28,7 @@ div.usuario p{
     /* margin-left: 270px; 
     margin-top: 50px" */
 }
-div.novedades h1{
+div.row .col h3{
     color: white;
-}
-div.novedades h2{
-    opacity: none;
+ 
 }
