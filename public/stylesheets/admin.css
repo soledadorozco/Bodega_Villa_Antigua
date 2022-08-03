@@ -28,7 +28,7 @@ div.listado{
 }
 div.row .col h3,
 div.row .col h2,
-div.row .col-9 h3,
+div.row .col-7 h3,
 .table th{
     color: white;
 }
@@ -42,7 +42,8 @@ div.row .col-9 h3,
     font-size: 24px;
     font-weight: 500;
 }
-p.requerido{
+p.requerido,
+p.buscador{
     color: red;
     font-size: 20px;
 }

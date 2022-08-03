@@ -4,11 +4,20 @@ var novedadesModel = require ('../../models/novedadesModel');
 
 //diseño y listado de novedades
 router.get('/', async function(req, res, next) {
-  var novedades = await novedadesModel.getNovedades();
+  // var novedades = await novedadesModel.getNovedades();
+var novedades
+if(req.query.q === undefined){
+  novedades = await novedadesModel.getNovedades();
+}else{
+  novedades = await novedadesModel.buscarNovedades(req.query.q);
+}
+
   res.render('admin/novedades',{
     layout:'admin/layout', // admin/layout.hbs
     persona:req.session.nombre, // falvia, soledad
-    novedades // si novedades está acá en minúscula, cuando la llame en el hbs tiene que ser con minúscula
+    novedades, // si novedades está acá en minúscula, cuando la llame en el hbs tiene que ser con minúscula
+    q:req.query.q,
+    is_search: req.query.q !== undefined
   }); // view/admin/novedades.hbs
 }); //cierro get
 

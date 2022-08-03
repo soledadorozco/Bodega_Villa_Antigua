@@ -1,17 +1,28 @@
 <div class="container margenes listado">
     <div class="row">
         <div class="col">
-            <h3 class="text-end">Bienvenido/a {{persona}}! <a href="/admin/login/logout" class="btn btn-danger"></button>Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket"></i></a></h3>
+            <h3 class="text-end">Bienvenido/a {{persona}}! <a href="/admin/login/logout"
+                    class="btn btn-danger"></button>Cerrar Sesión <i
+                        class="fa-solid fa-arrow-right-from-bracket"></i></a></h3>
         </div>
     </div>
     <div class="row">
-        <div class="col-9">
+        <div class="col-7">
             <h3>Listado de Novedades</h3>
         </div>
-        <div class="col-3 text-end">
+        <div class="col-2 text-end">
             <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fa-solid fa-plus"></i> Nuevo</a>
 
 
+        </div>
+        <div class="col-3 text-end">
+            <form action="/admin/novedades" method="get" class="d-flex">
+
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+                <button class="btn btn-secondary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+            </form>
+    
         </div>
 
 
@@ -23,7 +34,7 @@
                     <tr class="fila-1">
                         <th class="col-1">#</th>
                         <th class="col-9">Título</th>
-                        <th class="col-2 text-end" >Acciones</th>
+                        <th class="col-2 text-end">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,14 +42,23 @@
                     <tr>
                         <th class="col-1">{{id}}</th>
                         <th class="col-9">{{Titulo}}</th>
-                        <th class="col-2 text-end" ><a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a>
-                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></a>
+                        <th class="col-2 text-end"><a href="/admin/novedades/modificar/{{id}}"
+                                class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i
+                                    class="fa-solid fa-trash"></i></a>
                         </th>
-                   </tr>
-                   {{/each}}
-                    
+                    </tr>
+                    {{/each}}
+
                 </tbody>
             </table>
+
+            {{#if is_search}}
+                {{#unless novedades.length}}
+                    <p class="buscador">* No se encontraron resultados para <b>"{{q}}"</b></p>
+                {{/unless}}
+
+            {{/if}}
         </div>
     </div>
 </div>

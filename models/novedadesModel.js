@@ -37,6 +37,12 @@ async function getNovedades(){
         }
     }
 
+    async function buscarNovedades(busqueda){
+        var query = 'select * from novedades where titulo like ? OR subtitulo like ? OR cuerpo like ?';
+        var rows = await pool.query(query, ['%' + busqueda + '%', '%' + busqueda + '%', '%' + busqueda + '%']);
+        return rows;
+    }
 
-module.exports = { getNovedades, insertNovedades, deleteNovedadByID, getNovedadesByID, modificarNovedadByID}
+
+module.exports = { getNovedades, insertNovedades, deleteNovedadByID, getNovedadesByID, modificarNovedadByID, buscarNovedades}
 //try - catch: nos ayuda con el manejo de error
