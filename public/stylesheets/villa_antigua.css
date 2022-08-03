@@ -522,7 +522,7 @@ div.novedades{
 }
 div.novedades h2,
 div.novedades p{
-    color:white
+    color:white;
 }
 div.novedades h2{
     font-size: 40px;
@@ -547,6 +547,9 @@ div.noticia h3{
 div.noticia h4{
     font-size: 20px;
 }
+/* p.buscador{
+    color: black;
+} */
 /* div.noticia{
     max-width: 461px;
     min-height: 618px;
