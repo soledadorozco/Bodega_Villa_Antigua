@@ -7,6 +7,13 @@ router.get('/', function(req, res, next) {
     layout:'admin/layout' // admin/layout.hbs
   }); // view/admin/login.hbs
 });
+router.get('/logout', function(req,res,next){
+  req.session.destroy(); // destruye id, nombre
+  res.render('admin/login',{
+    layout:'admin/layout'
+  })
+})
+
 router.post('/', async function(req,res,next){
   try{
     console.log(req.body);
