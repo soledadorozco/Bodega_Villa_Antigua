@@ -5,21 +5,16 @@
         </div>
         <div class="noticias">
             <!-- noticia numero 1 -->
+            {{#each novedades}}
             <div class="noticia">
-                <h3>Tendencia: Vinos de aperitivo. </h3>
-                <h4>Los protagonistas: vinos blancos y rossè.</h4>
-                <p>En los últimos años las generaciones más jóvenes tomaron esta tradición de sus padres y abuelos y la
-                    convirtieron en una verdadera tendencia que -más allá del clásico vermouth- tiene a los vinos como
-                    protagonistas.El aperitivo es una costumbre muy arraigada en nuestro país que tiene sus orígenes en
-                    la inmigración europea de comienzos del siglo XX. Sin embargo, en los últimos años
-                    las generaciones más jóvenes tomaron esta tradición de sus padres y abuelos y la
-                    convirtieron en una verdadera tendencia que -más allá del clásico vermouth- tiene a
-                    los vinos como protagonistas.
-                </p>
+                <h3>{{titulo}}</h3>
+                <h4>{{subtitulo}}</h4>
+                <p>{{cuerpo}}</p>
                 <hr />
             </div>
+            {{/each}}
             <!-- noticia numero 2 -->
-            <div class="noticia">
+            {{!-- <div class="noticia">
                 <h3>¿Por qué los blends encarnan el estilo de una bodega?</h3>
                 <h4> Un gran blend es un minucioso trabajo autoral.</h4>
                 <p>A simple vista, la primera impresión que tenemos sobre un vino es si es un tinto, un
@@ -109,5 +104,5 @@
                     aumentando todos los años, con Estados Unidos como principal comprador.
                 </p>
                 <hr />
-            </div>
+            </div> --}}
         </div>
