@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req,res,next){
-    res.render('nuestros_viñedos',{
-        isNuestros_viñedos: true
-    }); // view/nuestros_viñedos.hbs
+    res.render('nuestros_vinedos',{
+        isNuestros_vinedos: true
+    }); // view/nuestros_vinedos.hbs
 })
 
 

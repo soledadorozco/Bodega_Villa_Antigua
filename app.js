@@ -9,7 +9,7 @@ var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var quienes_somosRouter = require('./routes/quienes_somos'); //routes/quienes_somos.js
-var nuestros_viñedosRouter = require('./routes/nuestros_viñedos'); //routes/nuestros_viñedos.js
+var nuestros_vinedosRouter = require('./routes/nuestros_vinedos'); //routes/nuestros_viñedos.js
 var nuestros_vinosRouter = require('./routes/nuestros_vinos'); //routes/nuestros_vinos.js
 var galeriaRouter = require('./routes/galeria'); //routes/galeria.js
 var novedadesRouter = require('./routes/novedades'); //routes/novedades.js
@@ -51,7 +51,7 @@ secured = async(req,res,next) => {
 
 app.use('/', indexRouter);
 app.use('/quienes_somos', quienes_somosRouter);
-app.use('/nuestros_viñedos', nuestros_viñedosRouter);
+app.use('/nuestros_vinedos', nuestros_vinedosRouter);
 app.use('/nuestros_vinos', nuestros_vinosRouter);
 app.use('/galeria', galeriaRouter);
 app.use('/novedades', novedadesRouter);
