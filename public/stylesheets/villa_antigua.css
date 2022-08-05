@@ -547,6 +547,11 @@ div.noticia h3{
 div.noticia h4{
     font-size: 20px;
 }
+p.buscador{
+    color:red;
+    font-size: 20px;
+    padding: 20px;
+}
 /* p.buscador{
     color: black;
 } */

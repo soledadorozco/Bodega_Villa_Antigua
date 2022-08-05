@@ -67,7 +67,7 @@ router.get('/eliminar/:id', async(req,res,next) =>{
   res.redirect('/admin/novedades')
 })
 
-//vista modificar (form) + los datos de campos para modificar
+//vista modificar (form) + los datos de los campos para modificar
 router.get('/modificar/:id', async(req,res,next) =>{
   var id = req.params.id;
   var novedad = await novedadesModel.getNovedadesByID(id);
@@ -98,7 +98,6 @@ router.post('/modificar', async(req,res,next) =>{
         error: true,
         message:'* No se modifico la novedad'
       })
-
    }
 })
 

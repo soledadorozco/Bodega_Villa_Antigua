@@ -14,7 +14,9 @@ router.get('/',async function(req,res,next){
     }
     res.render('novedades',{
         isNovedades: true,
-        novedades //de esta forma ya tengo los registros para poder imprimir en el hbs
+        novedades, //de esta forma ya tengo los registros para poder imprimir en el hbs
+        is_search: req.query.q !== undefined,
+        q:req.query.q
     }); // view/novedades.hbs
 })
 
