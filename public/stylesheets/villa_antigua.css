@@ -605,6 +605,9 @@ button.btn-primary{
     top: 10px;
 } */
 /*inicio contacto*/
+main.contenedor{
+    max-width: 100%;
+}
 div.social{
     display: flex;
     max-width: 90%;
@@ -730,11 +733,17 @@ div.ubicacion p{
     }
     div.frase{
         max-width: 100%;
+        position: relative;
+        top: -700px;
     }
     section.racimo,
     section.varietal{
-        width: 100%;
+        /* width: 100%; */
+        max-width: 100%;
         margin: 0 auto;
+        margin-left: 30px;
+        position:relative;
+        top: 600px;
    }
    .holder{
     padding: 0 16px;
@@ -797,9 +806,21 @@ div.ubicacion p{
     flex-direction: column;
     max-width: 100%;
    }
+   .viñedos p,
+   .viñedos h2{
+    text-align: center;
+    padding: 10px;
+   }
+   div .lulunta,
+   div .tunuyan,
+   div .miradores{
+    background-repeat: no-repeat;
+    margin: 16px;
+   }
    div.viñedo{
     max-width: 100%;
-    background-repeat: no-repeat;
+    margin: 0 auto;
+    /* margin-top: 16px; */
    }
    /*inicio nuestros vinos*/
    div.vinos{
@@ -827,9 +848,12 @@ div.ubicacion p{
    .btn{
     position: relative;
     top: 46px;
-    left: 12px;
+    left: 96px;
    }
    /*inicio contacto*/
+   main.contenedor{
+    margin: 10px;
+   }
    div.social{
     max-width: 100%;
     flex-direction: column;
