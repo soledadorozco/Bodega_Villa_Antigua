@@ -3,10 +3,10 @@
             <p>Las tendencias de la industria, las novedades, lo que viene. <br><br> Conocé el presente de la
                 vitivinicultura argentina y enterate de todo lo que tenés que saber acerca de nuestros vinos.</p>     
         </div>
-        <div style="float:right; position:relative; right: 100px; bottom:50px ">
+        <div class="buscador">
             <form action="/novedades" method="get">
-                <input class="buscador" type="search" style="width: 300px; height: 46px;" name="q" {{#if q}} value="{{q}}" {{/if}} > 
-                <button  class="btn btn-secondary" style="height: 46px; font-size:18px"; type="submit">Buscar</button>            
+                <input class="buscar" type="search"  name="q" {{#if q}} value="{{q}}" {{/if}} > 
+                <button  class="btn btn-secondary"; type="submit">Buscar</button>            
 
             </form>
         </div>
